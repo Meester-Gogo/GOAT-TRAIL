@@ -22,8 +22,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: npm
-      - run: npm ci
+      - run: npm install
       # Assets must be served from /<repo>/ on a GitHub project site.
       - run: npm run build
         env:
